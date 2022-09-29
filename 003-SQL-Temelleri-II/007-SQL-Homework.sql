@@ -27,6 +27,8 @@ GROUP BY store_id;
 en fazla şehir sayısı barındıran country_id bilgisini ve şehir sayısını paylaşınız. */
 
 /*
-SELECT country_id, COUNT(*) FROM city
-GROUP BY country_id;
+SELECT country_id, COUNT(city) FROM city
+GROUP BY country_id
+ORDER BY COUNT(city) DESC
+LIMIT 1;
 */
