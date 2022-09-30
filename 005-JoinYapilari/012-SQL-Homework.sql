@@ -1,4 +1,4 @@
-/* Aşağıdaki sorgu senaryolarını dvdrental örnek veri tabanı üzerinden gerçekleştiriniz.
+Aşağıdaki sorgu senaryolarını dvdrental örnek veri tabanı üzerinden gerçekleştiriniz.
 
 1. film tablosunda film uzunluğu length sütununda gösterilmektedir. Uzunluğu ortalama film uzunluğundan fazla kaç tane film vardır?
 
@@ -24,8 +24,6 @@ AND replacement_cost = ALL
 
 4. payment tablosunda en fazla sayıda alışveriş yapan müşterileri(customer) sıralayınız.
 
-*/
-
-
-
-
+SELECT customer_id, COUNT(payment_id) FROM payment
+GROUP BY customer_id
+ORDER BY COUNT(payment_id) DESC;
